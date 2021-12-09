@@ -8,61 +8,34 @@
     <meta name="description" content="Trabalho Prático 221B">
     <meta name="author" content="Bruno Pereira">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
     
     <title>Trabalho Prático 221B</title>
 
 </head>
 <body>
 
-<!-- Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid justify-content-between">
-    <!-- Left elements -->
-    <div class="d-flex">
-      <!-- Brand -->
-      <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-        <img
-          src="lupa.png"
-          height="20"
-          alt="221B Logo"
-          loading="lazy"
-          style="margin-top: 2px;"
-        />
-      </a>
-
-      <!-- Search form -->
-      <form class="input-group w-auto my-auto d-none d-sm-flex">
-        <input
-          autocomplete="off"
-          type="search"
-          class="form-control rounded"
-          placeholder="Search"
-          style="min-width: 125px;"
-        />
-      </form>
+<header id="navbar">
+  <nav class="navbar-container container">
+    <a href="/" class="home-link">
+      <div class="navbar-logo"></div>
+      Website Name
+    </a>
+    <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div id="navbar-menu" aria-labelledby="navbar-toggle">
+      <ul class="navbar-links">
+        <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/careers">Careers</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
+      </ul>
     </div>
-    <!-- Center elements -->
-
-    <div class="navbar-nav text-white flex-row d-none d-md-flex">
-    <strong>The tings finder</strong>
-    </div>
-
-    
-
-    <!-- Right elements -->
-    <ul class="navbar-nav text- white flex-row">
-      <li class="nav-item me-3 me-lg-1">
-        <a class="nav-link d-sm-flex align-items-sm-center" href="#">
-          <strong class="">Criar Conta</strong>
-        </a>
-      </li>
-        </ul>
-      </li>
-    </ul>
-    <!-- Right elements -->
-  </div>
-</nav>
+  </nav>
+</header>
     
 </body>
 </html>
