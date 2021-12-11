@@ -1,29 +1,32 @@
 <?php require_once './components/header.php' ?>
 
-  <div class="main-container-login">
-    <div class="side-logo">
-      <img style="max-width: 100%; height: auto;" src="./assets/logo.png">
-    </div>
-    <div class="login-box">
-      <div class="header">
-        <h2>Login Page</h2>
+  <div class="backgroundColor">
+    <div class="center-container">  
+      <div class="login-container">
+            <div class="image">
+              <img class="center-container" style="left: 25%; transform: translate(-75%, -50%);" src="./assets/logo_transparent.png" alt="logo">
+            </div>
+            <div class="content">
+                <h1>Login</h1>
+                <div>
+                    <label for="">Username</label>
+                    <br>
+                    <input type="text" name="" id="txt" aria-describedby="helpId" placeholder="Username">
+
+                </div>
+                <div>
+                    <label for="">Password</label>
+                    <br>
+                    <input type="password" name="" id="txt" placeholder="Password">
+                </div>
+                <a class="fp" href="index.php">Recuperar conta</a>
+                <br>
+                <button type="button" class="btn"><a href="index.php">Login</a></button>
+            </div>
+        </div>
       </div>
-      <div class="login">
-        <div class="form-control1">
-          <input type="text" placeholder="user name" class="tbox" required />
-        </div>
-        <div class="form-control1">
-          <input type="password" placeholder="*********" class="tbox" required />
-        </div>
-        <div class="form-control1">
-          <input type="submit" value="Login Now" class="btn" />
-        </div>
-        <div class="forget-box">
-          <a href="#" class="link">Recuperar conta</a>
-        </div>
-      </div>
     </div>
-  </div>
+
     
 </body>
 </html>

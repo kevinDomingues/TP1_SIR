@@ -1,3 +1,5 @@
+@import url("login_register.css");
+
 .divider:after,
 .divider:before {
   content: "";
@@ -21,18 +23,16 @@
   --text-color-focus: white;
   --bg-contrast: hsl(0, 0%, 25%);
 }
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
-
 .container {
   max-width: 1000px;
   padding-left: 1.4rem;
@@ -40,24 +40,21 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 #navbar {
-  --navbar-height: 64px;
+  --height: 64px;
   position: fixed;
-  height: var(--navbar-height);
+  height: var(--height);
   background-color: var(--bg-color);
   left: 0;
   right: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-
 .navbar-container {
   display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
 }
-
 .navbar-item {
   margin: 0.4em;
   width: 100%;
@@ -87,7 +84,6 @@ body {
   color: var(--text-color-focus);
   background-color: var(--bg-contrast);
 }
-
 .navbar-logo {
   background-color: var(--text-color-focus);
   border-radius: 50%;
@@ -95,7 +91,17 @@ body {
   height: 30px;
   margin-right: 0.5em;
 }
-
+#navbar-toggle {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .icon-bar {
   display: block;
   width: 25px;
@@ -103,89 +109,77 @@ body {
   margin: 2px;
   background-color: var(--text-color);
 }
-
+#navbar-toggle:is(:focus, :hover) .icon-bar {
+  background-color: var(--text-color-focus);
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
+  position: absolute;
+  margin: 0;
+  width: 30px;
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:first-child {
+  transform: rotate(45deg);
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:last-child {
+  transform: rotate(-45deg);
+}
 #navbar-menu {
   position: fixed;
-  top: var(--navbar-height);
+  top: var(--height);
   bottom: 0;
   opacity: 0;
   visibility: hidden;
   left: 0;
   right: 0;
 }
-
-.main-container-login{
-  display: grid; 
-  grid-template-columns: 1fr 2fr;
-  justify-content: center;
+#navbar-toggle[aria-expanded="true"] + #navbar-menu {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  visibility: visible;
 }
-
-.login-box{
-  display: grid;
-  border-radius: 4px; 
-  background-color: #fff; 
-  width: 450px; 
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; 
-}
-
-.header{
-  background: var(--bg-color);
-  background-size: cover;
-  height: 130px; 
-  border-top-left-radius: 4px; 
-  border-top-right-radius: 4px;
-  display: flex; 
-  justify-content: flex-start; 
-  padding-left: 20px; 
+.navbar-links {
+  list-style: none;
+  position: absolute;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  color: #f5f5f5;
-}
-  
-.tbox{
-  width: 97.33%; 
-  height: 45px; 
-  padding-left: 10px; 
-  border-radius: 3px; 
-  border: 1px solid #f1f1f1; 
-  margin-bottom: 10px; 
-  outline: none; 
-  font-size: 0.9rem;
-  transition: 0.6s; 
-  color: #333; 
-}
-  
-.tbox:focus{
-  border: 1px solid rgba(209,66,105,0.36); 
-  transition: 0.6s;
-   color: #d14269;
-}
-.login{
-  margin: 15px 20px;
+  left: 0;
+  right: 0;
+  margin: 1.4rem;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.btn{
-  border: 1px solid #f5f5f5; 
-  width: 100%; 
-  padding: 15px 0; 
-  border-radius: 4px; 
-  margin-top: 10px; 
-  margin-bottom: 10px; 
-  background-color: #033551; 
-  color: #f5f5f5; 
-  font-size: 1.2rem; 
-  outline: none; 
-  transition: 0.6s;
+#navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
+  padding: 1em;
 }
-.btn:hover{
-  background-color: #333;
-  transition: 0.6s;
-}
+@media screen and (min-width: 700px) {
+  #navbar-toggle,
+  #navbar-toggle[aria-expanded="true"] {
+    display: none;
+  }
 
-.forget-box{
-  text-align: center;
-}
+  #navbar-menu,
+  #navbar-toggle[aria-expanded="true"] #navbar-menu {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    display: block;
+    height: 100%;
+  }
 
-.side-logo{
-  border-radius: 4px; 
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; 
+  .navbar-links,
+  #navbar-toggle[aria-expanded="true"] #navbar-menu .navbar-links {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    position: static;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
 }
