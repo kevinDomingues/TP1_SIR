@@ -7,23 +7,31 @@
               <img class="center-container" style="left: 25%; transform: translate(-75%, -50%);" src="./assets/logo_transparent.png" alt="logo">
             </div>
             <div class="content">
-                <h1>Login</h1>
+                <h1>Criar Conta</h1>
                 <div>
                     <label for="">Email</label>
                     <br>
                     <input type="email" name="" id="txt" aria-describedby="helpId" placeholder="example@email.com">
-
+                </div>
+                <div>
+                    <label for="">Nome Completo</label>
+                    <br>
+                    <input type="text" name="" id="txt" aria-describedby="helpId" placeholder="Nome completo">
                 </div>
                 <div>
                     <label for="">Password</label>
                     <br>
                     <input type="password" name="" id="txt" placeholder="Password">
                 </div>
-                <a class="fp" href="index.php">Recuperar conta</a>
+                <div>
+                    <label for="">Confirmar Password</label>
+                    <br>
+                    <input type="password" name="" id="txt" placeholder="Password">
+                </div>
                 <br>
-                <button type="button"><a href="login.php">Login</a></button>
+                <button type="button"><a href="signUp.php">Criar Conta</a></button>
                 <br>
-                <a class="btn" href="signUp.php">Criar Conta</a>
+                <a class="btn" href="login.php">Voltar</a>
             </div>
         </div>
       </div>
