@@ -46,13 +46,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ) {
                   <div>
                       <label for="">Email</label>
                       <br>
-                      <input type="email" name="email" id="txt" aria-describedby="helpId" placeholder="example@email.com">
+                      <input type="email" name="email" id="txt" aria-describedby="helpId" placeholder="example@email.com" required>
 
                   </div>
                   <div>
                       <label for="">Password</label>
                       <br>
-                      <input type="password" name="pass" id="txt" placeholder="Password">
+                      <input type="password" name="pass" id="txt" placeholder="Password" required>
                   </div>
                   <a class="fp" href="index.php">Recuperar conta</a>
                   <br>
