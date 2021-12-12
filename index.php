@@ -1,4 +1,14 @@
-<?php require_once './components/header.php' ?>
+<?php 
+  require_once './components/header.php';
+  require_once './database/connection.php';
+
+  if ($_SERVER['REQUEST_METHOD'] !== 'POST' ) {
+    header('location: login.php');
+  } else {
+    $email = $_POST['email'];
+  }
+  
+?>
 
 <header id="navbar">
   <nav class="navbar-container container">
