@@ -1,4 +1,38 @@
-<?php require_once './components/header.php' ?>
+<?php 
+
+require_once './components/header.php';
+require_once './database/connection.php';
+
+$email = '';
+$pass = '';
+
+$err = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' ) {
+  $email = $_POST['email'];
+  $pass = $_POST['pass'];
+
+  $pass = hash('sha256', $pass);
+
+  $statement = $pdo->prepare("SELECT * FROM utilizador WHERE id_email = :email");
+  $statement->bindValue(':email', $email);
+  $statement->execute();
+
+  $user = $statement->fetch(PDO::FETCH_ASSOC);
+
+  if($user){
+    if($user['password'] === $pass){
+      header('location: dashboard.php');
+    } else {
+      $err = 'Credenciais erradas';
+    }
+  } else {
+    $err = 'Utilizador não existe';
+  }
+}
+
+
+?>
 
   <div class="backgroundColor">
     <div class="center-container">  
@@ -8,20 +42,27 @@
             </div>
             <div class="content">
                 <h1>Login</h1>
-                <div>
-                    <label for="">Email</label>
-                    <br>
-                    <input type="email" name="" id="txt" aria-describedby="helpId" placeholder="example@email.com">
+                <form action="login.php" action="login.php" method="POST">
+                  <div>
+                      <label for="">Email</label>
+                      <br>
+                      <input type="email" name="email" id="txt" aria-describedby="helpId" placeholder="example@email.com">
 
-                </div>
-                <div>
-                    <label for="">Password</label>
-                    <br>
-                    <input type="password" name="" id="txt" placeholder="Password">
-                </div>
-                <a class="fp" href="index.php">Recuperar conta</a>
-                <br>
-                <button type="button"><a href="login.php">Login</a></button>
+                  </div>
+                  <div>
+                      <label for="">Password</label>
+                      <br>
+                      <input type="password" name="pass" id="txt" placeholder="Password">
+                  </div>
+                  <a class="fp" href="index.php">Recuperar conta</a>
+                  <br>
+                  <button type="submit" class="submit">Login</button>
+                </form>
+                <?php if ($err): ?>
+                  <div class="error">
+                      <div><?php echo $err ?></div>
+                  </div>
+                <?php endif ?>
                 <br>
                 <a class="btn" href="signUp.php">Criar Conta</a>
             </div>
