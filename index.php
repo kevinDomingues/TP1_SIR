@@ -37,6 +37,13 @@
     </div>
   </nav>
 </header>
+
+<main class="landing">
+  <div class="home-wrap">
+    <div class="home-inner">
+    </div>
+  </div>
+</main>
     
 </body>
 </html>
