@@ -45,10 +45,12 @@
   </div>
 </main>
 
-<div class="titulocontainer">
-    <h1 class="titulo">Sherlock Holmes</h1>
-    
+<div class="caption">
+  <div class="titulocontainer">
+      <h1 class="titulo">Sherlock Holmes</h1>
+  </div>
 </div>
+
 
 
 
