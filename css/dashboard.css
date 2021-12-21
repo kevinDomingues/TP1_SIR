@@ -2,15 +2,17 @@
         background-color: #bbbbbb;
     }
     
-    .dashboardcontainer  {
+    /* .dashboardcontainers  {
+        text-align: center;
+        position: fixed;
         width: 100%;
-        padding-top: 5%;
-        display: flex;             /* establish flex container */
-        flex-direction: row;            /* default value; can be omitted */
-        flex-wrap: nowrap;              /* default value; can be omitted */
-        justify-content: space-between; /* switched from default (flex-start, see below) */
+        padding-top: 8%;
+        display: flex;             
+        flex-wrap: nowrap;              
+        justify-content: space-between; 
+        align-items: center;
     }
-    .dashboardcontainer > div {
+    .dashboardcontainers > div {
         width: 100px;
         height: 100px;
         background-color: white;
@@ -24,23 +26,188 @@
         opacity: 0%;
     }
 
-    .dashboardfeed {
-
-        width: 100%;
+    .dashboardLMenu {
+        z-index: 9;
+        width: 400px;
+        height: 400px;
         padding-top: 5%;
-        display: flex;             /* establish flex container */
-        flex-direction: row;            /* default value; can be omitted */
-        flex-wrap: nowrap;              /* default value; can be omitted */
-        justify-content: center;
-        
     }
-    .dashboardfeed > div {
-        position:absolute;
+    .dashboardLMenu > div {
         width: 50%;
-        height: 100px;
-        background-color: white;
+        height: 90%;
+        background-color: rgb(255, 255, 255);
         padding: 8%;
         margin: 6%;
-        margin-top: 0%;
         border-radius: 30px 30px;
     }
+
+    .dashboardRMenu {
+
+        z-index: 8;
+        width: 400px;
+        height: 400px;
+        padding-top: 5%;     
+    }
+    .dashboardRMenu > div {
+        width: 50%;
+        height: 90%;
+        background-color: rgb(255, 255, 255);
+        padding: 8%;
+        margin: 6%;
+        border-radius: 30px 30px;
+    }
+
+    .dashboardfeed {
+        position:absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        padding-top: 5%;
+        display: flex;             
+        flex-direction: row;            
+        justify-content: center;
+    }
+    .dashboardfeed > div {
+        width: 50%;
+        height: 90%;
+        background-color: rgb(255, 255, 255);
+        padding: 8%;
+        margin: 6%;
+        border-radius: 30px 30px;
+    }
+
+    .dashboardfeed h1{
+        text-align: center;
+    }
+
+    .dashboardcontainers h1{
+        text-align: center;
+    }
+
+    .fotoPerfil{
+        text-decoration: none;
+        display: flex;
+        font-weight: 400;
+        align-items: center;
+    }
+
+    .fotoPerfilImg{
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-right: 0.5em;
+        align-items: center;
+        justify-content: center;
+        margin-left: -18px;
+        margin-top: -70px;
+    }
+*/
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+.bodydashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  background-color: #f7f8fc;
+  font-family: "Roboto", sans-serif;
+  color: #10182f;
+}
+.dashboardcontainer {
+  display: flex;
+  width: 1040px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.dashboardcard {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+}
+
+.dashboardcard-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.dashboardcard-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 250px;
+}
+
+.dashboardtag {
+  background: #cccccc;
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 0;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.dashboardtag-teal {
+  background-color: #47bcd4;
+}
+.dashboardtag-purple {
+  background-color: #5e76bf;
+}
+.dashboardtag-pink {
+  background-color: #cd5b9f;
+}
+
+.dashboardcard-body p {
+  font-size: 13px;
+  margin: 0 0 40px;
+}
+.dashboarduser {
+  display: flex;
+  margin-top: auto;
+}
+
+.dashboarduser img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.dashboarduser-info h5 {
+  margin: 0;
+}
+.dashboarduser-info small {
+  color: #545d7a;
+}
+
+.left-menu{
+    margin-left: -45%;
+}
+
+.dashboardcard-left-menu-header{
+    text-align: center;
+}
+
+.dashboardcard-left-menu-header img {
+    margin-top: 5%;
+    width: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+.right-menu{
+    margin-right: -21%;
+}
+
+.feed{
+    width: 90%;
+}
