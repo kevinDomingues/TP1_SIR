@@ -14,130 +14,166 @@ require_once './components/nav.php';
                 <div class="dashboardcard-left-menu-header">
                     <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="rover" />
                     <h1>Sara Sampaio</h1>
-                    <h6>Ultimo apontamento "--/--/----"</h5>
+                    <h6>Ultimo apontamento "22/12/2021 13:02"</h5>
                 </div>
 
                 <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-teal">Technology</span>
-                    <h4>
-                        Why is the Tesla Cybertruck designed the way it
-                        is?
-                    </h4>
-                    <p>
-                        An exploration into the truck's polarising design
-                    </p>
-                    <div class="dashboarduser">
-                        <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
-                        <div class="dashboarduser-info">
-                        <h5>July Dec</h5>
-                        <small>2h ago</small>
-                        </div>
-                    </div>
+                    <p><h4>Próximo apontamento a expirar:</h4>Aniversário do Kévin</p>
+                    <p><h4>Último apontamento registado:</h4>Aniversário do Kévin</p>
                 </div>
             </div>
 
             <div class="dashboardcard feed">
-                <div class="dashboardcard-header">
-                <!--  <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg" alt="ballons" /> -->
-                    <h1>"imagem do apontamento"</h1>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
+                <div class="cardsFeed">
+                    <div class="dashboardcard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
                     </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
+                    <div class="dashboardcard-body">
+                        <span class="dashboardtag dashboardtag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="dashboarduser">
+                            <small>22/12/2021 13:02</small>
+                        </div>
+                        
                     </div>
+                    
                 </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
+
+                <hr>
+
+                <div class="cardsFeed">
+                    <div class="dashboardcard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
                     </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
+                    <div class="dashboardcard-body">
+                        <span class="dashboardtag dashboardtag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="dashboarduser">
+                            <small>22/12/2021 13:02</small>
+                        </div>
+                        
                     </div>
+                    
                 </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
+
+                <hr> <div class="cardsFeed">
+                    <div class="dashboardcard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
                     </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
+                    <div class="dashboardcard-body">
+                        <span class="dashboardtag dashboardtag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="dashboarduser">
+                            <small>22/12/2021 13:02</small>
+                        </div>
+                        
                     </div>
+                    
                 </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
+
+                <hr> <div class="cardsFeed">
+                    <div class="dashboardcard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
                     </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
+                    <div class="dashboardcard-body">
+                        <span class="dashboardtag dashboardtag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="dashboarduser">
+                            <small>22/12/2021 13:02</small>
+                        </div>
+                        
                     </div>
+                    
                 </div>
+
+                <hr> <div class="cardsFeed">
+                    <div class="dashboardcard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
+                    </div>
+                    <div class="dashboardcard-body">
+                        <span class="dashboardtag dashboardtag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="dashboarduser">
+                            <small>22/12/2021 13:02</small>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <hr>
+                
+                <div class="cardsFeed">
+                    <div class="dashboardcard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
+                    </div>
+                    <div class="dashboardcard-body">
+                        <span class="dashboardtag dashboardtag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="dashboarduser">
+                            <small>22/12/2021 13:02</small>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <hr> 
+                
+                <div class="cardsFeed">
+                    <div class="dashboardcard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
+                    </div>
+                    <div class="dashboardcard-body">
+                        <span class="dashboardtag dashboardtag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="dashboarduser">
+                            <small>22/12/2021 13:02</small>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <hr>
+
             </div>
+
    
     </div>
 </div>

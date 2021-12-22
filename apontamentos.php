@@ -7,182 +7,172 @@ require_once './components/nav.php';
 <body style="background-color:#f7f8fc;">
     
 
-    <div class="bodydashboard">
+    <div class="bodyapontamentos">
 
-        <div class="dashboardcontainer">
-            <div class="dashboardcard left-menu">
-                <div class="dashboardcard-left-menu-header">
-                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="rover" />
-                    <h1>Sara Sampaio</h1>
-                    <h6>Ultimo apontamento "--/--/----"</h5>
+        <div class="apontamentoscontainer">
+            <div class="apontamentoscard left-menu">
+                <div class="apontamentoscard-left-menu-header">
+                    
                 </div>
 
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-teal">Technology</span>
-                    <h4>
-                        Why is the Tesla Cybertruck designed the way it
-                        is?
-                    </h4>
-                    <p>
-                        An exploration into the truck's polarising design
-                    </p>
-                    <div class="dashboarduser">
-                        <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
-                        <div class="dashboarduser-info">
-                        <h5>July Dec</h5>
-                        <small>2h ago</small>
+                <div class="apontamentoscard-body">
+                    <ul>
+                        <li>
+                            <details>
+                                <summary>Ordenar</summary>
+                                <ul class="listaDeOrdenar">
+                                    <li><a href="">Ordenar por nome</a></li>
+                                    <li><a href="">Ordenar por tipo</a></li>
+                                    <li><a href="">Ordenar por data de modificação</a></li>
+                                    <li><a href="">Ordenar por data de término</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Filtra</summary>
+                                <ul class="filtrar">
+                                    <li><a href="">Aniversário</a></li>
+                                    <li><a href="">Lembrete de sítio</a></li>
+                                    <li><a href="">Outros</a></li>
+                                </ul>
+                            </details>
+
+                        </li>
+                    </ul>
+                    
+                   
+                </div>
+            </div>
+
+            <div class="apontamentoscard feed">
+                <div class="cardsFeed">
+                    <div class="apontamentoscard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
+                    </div>
+                    <div class="apontamentoscard-body">
+                        <span class="apontamentostag apontamentostag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="apontamentosuser">
+                            <small>22/12/2021 13:02</small>
                         </div>
+                        
                     </div>
+                    
                 </div>
-            </div>
 
-            <div class="dashboardcard feed">
-                <div class="dashboardcard-header">
-                <!--  <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg" alt="ballons" /> -->
-                    <h1>"imagem do apontamento"</h1>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
-                    </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
-                    </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
-                    </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
-                    </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
-                    </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
-                    </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
-                    </div>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-purple">Popular</span>
-                    <h4>
-                        Titulo do apontamento
-                    </h4>
-                    <p>
-                        descrição do apontamento
-                    </p>
-                    <div class="dashboarduser">
-                        <small>Data hora que foi feito</small>
-                    </div>
-                </div>
-            </div>
+                <hr>
 
-            <div class="dashboardcard right-menu">
-                
-                <div class="dashboardcard-header">
-                    <h1>Configurações</h1>
-                </div>
-                <div class="dashboardcard-body">
-                    <span class="dashboardtag dashboardtag-pink">Design</span>
-                    <h4>
-                        10 Rules of Dashboard Design
-                    </h4>
-                    <p>
-                        Dashboard Design Guidelines
-                    </p>
-                    <div class="dashboarduser">
-                        <img src="https://studyinbaltics.ee/wp-content/uploads/2020/03/3799Ffxy.jpg" alt="user" />
-                        <div class="dashboarduser-info">
-                            <h5>Carrie Brewer</h5>
-                            <small>1w ago</small>
+                <div class="cardsFeed">
+                    <div class="apontamentoscard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
+                    </div>
+                    <div class="apontamentoscard-body">
+                        <span class="apontamentostag apontamentostag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="apontamentosuser">
+                            <small>22/12/2021 13:02</small>
                         </div>
+                        
                     </div>
+                    
                 </div>
 
+                <hr>
+                <div class="cardsFeed">
+                    <div class="apontamentoscard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
+                    </div>
+                    <div class="apontamentoscard-body">
+                        <span class="apontamentostag apontamentostag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="apontamentosuser">
+                            <small>22/12/2021 13:02</small>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <hr>
+                <div class="cardsFeed">
+                    <div class="apontamentoscard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
+                    </div>
+                    <div class="apontamentoscard-body">
+                        <span class="apontamentostag apontamentostag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="apontamentosuser">
+                            <small>22/12/2021 13:02</small>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <hr>
+                <div class="cardsFeed">
+                    <div class="apontamentoscard-header">
+                        <img src="./assets/ballons.png" alt="ballons" />
+                    </div>
+                    <div class="apontamentoscard-body">
+                        <span class="apontamentostag apontamentostag-purple">Aniversário</span>
+                        <h4>
+                            O Kévin faz anos
+                        </h4>
+                        <p>
+                            Aniversário do Kévin dia 15 de Novembro
+                        </p>
+                        <div class="apontamentosuser">
+                            <small>22/12/2021 13:02</small>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <hr>
+
             </div>
-            
-        
-    </div>
+        </div>
     </div>
     
 
 
 
 
-    </body>
+</body>
 
-<!--<body class="dashboardbackground">
+<!--<body class="apontamentosbackground">
 
-<div class="dashboardfeed">
+<div class="apontamentosfeed">
     <div>
         <h1>Feed</h1>
     </div>
 </div>
 
 <div class="leftPanel">
-    <div class="dashboardLMenu">
+    <div class="apontamentosLMenu">
         <div>
             <h1>Profile</h1>
         </div>
@@ -190,14 +180,14 @@ require_once './components/nav.php';
 </div>
 
 <div class="rightPanel">
-    <div class="dashboardRMenu">
+    <div class="apontamentosRMenu">
         <div>
             <h1>Menu</h1>
         </div>
     </div>
 </div>
 
-<div class="dashboardcontainers">
+<div class="apontamentoscontainers">
     <div>
         <div class="fotoPerfil">
             <img class="fotoPerfilImg" src="./assets/logo.png">
