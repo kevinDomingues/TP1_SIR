@@ -138,9 +138,34 @@ require_once './components/nav.php';
                     </div>
                 </div>
             </div>
-   
+
+            <div class="dashboardcard right-menu">
+                
+                <div class="dashboardcard-header">
+                    <h1>Configurações</h1>
+                </div>
+                <div class="dashboardcard-body">
+                    <span class="dashboardtag dashboardtag-pink">Design</span>
+                    <h4>
+                        10 Rules of Dashboard Design
+                    </h4>
+                    <p>
+                        Dashboard Design Guidelines
+                    </p>
+                    <div class="dashboarduser">
+                        <img src="https://studyinbaltics.ee/wp-content/uploads/2020/03/3799Ffxy.jpg" alt="user" />
+                        <div class="dashboarduser-info">
+                            <h5>Carrie Brewer</h5>
+                            <small>1w ago</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        
     </div>
-</div>
+    </div>
     
 
 

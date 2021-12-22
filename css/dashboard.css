@@ -111,18 +111,19 @@
 .bodydashboard {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100%;
-  margin: 0;
-  background-color: #f7f8fc;
   font-family: "Roboto", sans-serif;
   color: #10182f;
+  margin: 0;
+  
 }
 .dashboardcontainer {
   display: flex;
-  width: 1040px;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-left: 0%;
+  margin-top: 5%;
+  
 }
 .dashboardcard {
   margin: 10px;
@@ -190,7 +191,8 @@
 }
 
 .left-menu{
-    margin-left: -45%;
+    margin-left:-40%;
+    height: 50%;
 }
 
 .dashboardcard-left-menu-header{
@@ -205,9 +207,14 @@
   }
 
 .right-menu{
-    margin-right: -21%;
+    margin-right: -40%;
+    height: 50%;
 }
 
 .feed{
-    width: 90%;
+    width: 100%;
+    min-height: 95%;
+    overflow-x:hidden;
+    overflow-y:auto;
+    
 }
