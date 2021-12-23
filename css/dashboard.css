@@ -88,6 +88,7 @@
     min-width: 45%;
     margin-left:-50%;
     min-height: 20%;
+    max-height: 30%;
 }
 
 .dashboardcard-left-menu-header{
@@ -122,3 +123,34 @@
 
 }
 
+@media screen and (max-width: 730px) {
+  .bodydashboard {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    font-family: "Roboto", sans-serif;
+    color: #10182f;
+    text-align: center;
+    padding: 5%;
+  }
+  .dashboardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0%;
+    margin-top: 20%;
+  }
+  .left-menu{
+    min-width: 90%;
+    margin: 0;
+    padding: 0;
+    min-height: 20%;
+    max-height: 30%;
+  }
+  .feed{
+    float: left;
+    min-width: 90%;
+    min-height: 95%;
+    
+}
+
+}

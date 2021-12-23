@@ -1,6 +1,6 @@
 <header id="navbar">
   <nav class="navbar-container container">
-    <a href="/TP1_SIR" class="home-link">
+    <a href="/TP1_SIR/dashboard.php" class="home-link">
       <img class="navbar-logo" src="./assets/logo.png">
       221B
     </a>

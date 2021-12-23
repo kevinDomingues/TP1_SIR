@@ -16,22 +16,30 @@ require_once './components/nav.php';
                 </div>
 
                 <div class="apontamentoscard-body">
-                    <ul>
+                <button type="button" class="collapsible">Ordenar</button>
+                    <div class="content">
+                        <ul>
+                            <li><a href="">Por nome</a></li>
+                            <li><a href="">Por tipo</a></li>
+                            <li><a href="">Por data</a></li>
+                        </ul>
+                    </div>
+      <!--              <ul>
                         <li>
                             <details>
                                 <summary>Ordenar</summary>
-                                <ul class="listaDeOrdenar">
+                                
                                     <li><a href="">Ordenar por nome</a></li>
                                     <li><a href="">Ordenar por tipo</a></li>
                                     <li><a href="">Ordenar por data de modificação</a></li>
                                     <li><a href="">Ordenar por data de término</a></li>
-                                </ul>
+                                
                             </details>
                         </li>
                         <li>
                             <details>
                                 <summary>Filtra</summary>
-                                <ul class="filtrar">
+                                
                                     <li><a href="">Aniversário</a></li>
                                     <li><a href="">Lembrete de sítio</a></li>
                                     <li><a href="">Outros</a></li>
@@ -39,7 +47,7 @@ require_once './components/nav.php';
                             </details>
 
                         </li>
-                    </ul>
+                    </ul> -->
                     
                    
                 </div>
@@ -157,7 +165,6 @@ require_once './components/nav.php';
         </div>
     </div>
     
-
 
 
 
