@@ -12,18 +12,30 @@ require_once './components/nav.php';
         <div class="apontamentoscontainer">
             <div class="apontamentoscard apontamentosleft-menu">
                 <div class="apontamentoscard-left-menu-header">
-                    <h1>Filtros</h1>
+                    <h1 class="titleFiltros">Filtros</h1>
                 </div>
 
                 <div class="apontamentoscard-body">
-                <button type="button" class="collapsible">Ordenar</button>
+                    <button type="button" class="collapsible">Ordenar</button>
                     <div class="content">
-                        <ul>
+                        <ul class="no-bullets">
                             <li><a href="">Por nome</a></li>
                             <li><a href="">Por tipo</a></li>
                             <li><a href="">Por data</a></li>
                         </ul>
                     </div>
+                    
+                    <button type="button" class="collapsible">Mostrar apenas</button>
+                    <div class="content">
+                        <ul class="no-bullets">
+                            <li><a href="">Aniversários</a></li>
+                            <li><a href="">Lembretes</a></li>
+                            <li><a href="">Marcos</a></li>
+                            <li><a href="">Localizar</a></li>
+                            <li><a href="">Outros</a></li>
+                        </ul>
+                    </div>
+
       <!--              <ul>
                         <li>
                             <details>

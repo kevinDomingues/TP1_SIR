@@ -8,6 +8,7 @@
     <meta name="description" content="Trabalho Prático 221B">
 
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     
     <title>Trabalho Prático 221B</title>
 

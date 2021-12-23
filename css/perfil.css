@@ -1,0 +1,148 @@
+.bodyPerfil {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil-card{
+    min-width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #9ecaed;
+  }
+  
+  
+  .perfil-card-header{
+    background: var(--bg-color);
+    padding: 60px 40px;
+  }
+  
+  .perfil-img{
+    display: inline-block;
+    padding: 8px;
+    background: linear-gradient(130deg, var(--content-background), var(--bg-color));
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    animation: animated-gradient 2s linear infinite;
+  }
+  
+  @keyframes animated-gradient{
+    25%{
+      background-position: left bottom;
+    }
+    50%{
+      background-position: right bottom;
+    }
+    75%{
+      background-position: right top;
+    }
+    100%{
+      background-position: left top;
+    }
+  }
+  
+  .perfil-img img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .perfil-nome{
+    color: #EEEDF0 ;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .perfil-desc{
+    font-size: 18px;
+    color: var(--buttons-hover);
+  }
+  
+  .perfil-localizacao {
+    margin: 10px 0;
+    color: var(--content-background) ;
+  }
+  
+  .perfil-icons{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .perfil-icons a{
+    color: #f2f2f2;
+    width: 56px;
+    font-size: 22px;
+    transition: .3s linear;
+  }
+  
+  .perfil-icons a:hover{
+    color: #6C72CB;
+  }
+  
+  .perfil-contact-btn{
+    display: inline-block;
+    padding: 12px 50px;
+    color: var(--buttons-hover);
+    border: 2px solid var(--content-background);
+    border-radius: 6px;
+    margin-top: 16px;
+    transition: .3s linear;
+  }
+  
+  .perfil-contact-btn:hover{
+    background:var(--content-background);
+    color: #f2f2f2;
+  }
+  
+  .perfil-card-footer{
+    background: #ffffff;
+    padding: 60px 10px;
+  }
+  
+  .perfil-numbers{
+    display: flex;
+    align-items: center;
+  }
+  
+  .perfil-item{
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--buttons-hover) ;
+    font-weight: 500;
+  }
+  
+  .perfil-item span{
+    display: block;
+    color: #2c3a47;
+    font-size: 30px;
+  }
+  
+  .perfil-border{
+    width: 2px;
+    height: 30px;
+  /*   background: #bbb; */
+    background: linear-gradient(130deg, var(--content-background), var(--bg-color));
+  }
+  
+  .perfil-instagram-conta{
+    margin-top: 50px;
+    font-size: 15px;
+  }
+
+  .fa-pencil{
+      z-index: 3;
+      position: relative;
+      float: right;
+  }

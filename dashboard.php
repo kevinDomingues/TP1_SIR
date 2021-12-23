@@ -177,50 +177,6 @@ require_once './components/nav.php';
    
     </div>
 </div>
-    
-
-
-
-
-
-
-<!--<body class="dashboardbackground">
-
-<div class="dashboardfeed">
-    <div>
-        <h1>Feed</h1>
-    </div>
-</div>
-
-<div class="leftPanel">
-    <div class="dashboardLMenu">
-        <div>
-            <h1>Profile</h1>
-        </div>
-    </div>
-</div>
-
-<div class="rightPanel">
-    <div class="dashboardRMenu">
-        <div>
-            <h1>Menu</h1>
-        </div>
-    </div>
-</div>
-
-<div class="dashboardcontainers">
-    <div>
-        <div class="fotoPerfil">
-            <img class="fotoPerfilImg" src="./assets/logo.png">
-        </div>
-        
-        
-    </div>
-    <div class="middlediv"></div>
-    <div>
-        <h1>Settings</h1>
-    </div>
-</div>-->
 
 <?php
 require_once './components/scripts.php';

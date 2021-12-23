@@ -10,7 +10,7 @@ box-sizing: border-box;
     color: #10182f;
     margin: 0;
     padding: 5%;
-    padding-left: 22%;
+    padding-left: 24%;
 
 }
 .apontamentoscontainer {
@@ -89,6 +89,7 @@ color: #545d7a;
     min-width: 43%;
     margin-left:-50%;
     min-height: 20%;
+    max-height: 30%;
 }
 
 .apontamentoscard-left-menu-header{
@@ -109,6 +110,12 @@ text-align: center;
 
 }
 
+ul.no-bullets {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
 .apontamentoscardsFeed {
     display: flex;
     justify-content: space-evenly;
@@ -124,8 +131,7 @@ text-align: center;
 }
 
 .collapsible {
-    background-color: #eee;
-    color: #444;
+    background-color: var(--bg-contrast);
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -133,17 +139,143 @@ text-align: center;
     text-align: left;
     outline: none;
     font-size: 15px;
+    border-radius: 10px 10px;
+    color: white;
+    margin-top: 5%;
   }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .collapsible:hover {
-    background-color: #ccc;
+    background-color: var(--buttons-hover);
   }
   
-  /* Style the collapsible content. Note: hidden by default */
   .content {
-    padding: 0 18px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+    padding: 0 10px;
     display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
   }
+
+  .titleFiltros{
+      color: var(--bg-contrast)
+  }
+  
+  .no-bullets a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    
+  }
+
+
+  @media screen and (max-width: 1280px){
+
+    .bodyapontamentos {
+        display: flex;
+        justify-content: center;
+        min-height: 100%;
+        font-family: "Roboto", sans-serif;
+        color: #10182f;
+        margin: 0;
+        padding: 5%;
+        padding-left: 35%;
+    }
+    .apontamentoscontainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0%;
+        margin-top: 10%;
+    }
+    
+    .apontamentosleft-menu{
+        float: left;
+        min-width: 45%;
+        margin-left:-50%;
+        min-height: 20%;
+        max-height: 30%;
+    }
+    .apontamentosfeed{
+        float: left;
+        min-width: 100%;
+        min-height: 95%;
+      
+  }
+  
+  }
+
+  @media screen and (max-width: 1017px) {
+
+    .bodyapontamentos {
+        display: flex;
+        justify-content: center;
+        min-height: 100%;
+        font-family: "Roboto", sans-serif;
+        color: #10182f;
+        margin: 0;
+        padding: 5%;
+    
+    }
+    .apontamentoscontainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0%;
+        margin-top: 20%;
+    
+    }
+    
+    .apontamentosleft-menu{
+      min-width: 90%;
+      margin: 0;
+      padding: 0;
+      min-height: 20%;
+      max-height: 30%;
+    }
+    .apontamentosfeed{
+      float: left;
+      min-width: 90%;
+      min-height: 95%;
+      
+  }
+  
+  }
+
+  @media screen and (max-width: 827px) {
+
+    .bodyapontamentos {
+        display: flex;
+        justify-content: center;
+        min-height: 100%;
+        font-family: "Roboto", sans-serif;
+        color: #10182f;
+        margin: 0;
+        padding: 5%;
+    
+    }
+    .apontamentoscontainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0%;
+        margin-top: 20%;
+    
+    }
+    
+    .apontamentosleft-menu{
+      min-width: 90%;
+      margin: 0;
+      padding: 0;
+      min-height: 20%;
+      max-height: 30%;
+    }
+    .apontamentosfeed{
+      float: left;
+      min-width: 90%;
+      min-height: 95%;
+      
+  }
+  
+  }
+  
