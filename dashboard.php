@@ -182,7 +182,7 @@ require_once './components/nav.php';
 
 
 
-    </body>
+
 
 <!--<body class="dashboardbackground">
 

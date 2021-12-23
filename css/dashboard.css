@@ -10,7 +10,7 @@
   color: #10182f;
   text-align: center;
   padding: 5%;
-  padding-left: 35%;
+  padding-left: 26%;
   
 }
 .dashboardcontainer {
@@ -24,7 +24,7 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-  min-width: 30%;
+  min-width: 45%;
   padding: 5%;
 }
 
@@ -85,7 +85,7 @@
 
 .left-menu{
     float: left;
-    min-width: 40%;
+    min-width: 45%;
     margin-left:-50%;
     min-height: 20%;
 }
@@ -102,7 +102,7 @@
   }
 
 .feed{
-  float: left;
+    float: left;
     min-width: 100%;
     min-height: 95%;
     

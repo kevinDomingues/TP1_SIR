@@ -11,7 +11,7 @@
     </button>
     <div id="navbar-menu" aria-labelledby="navbar-toggle">
       <ul class="navbar-links" id="dropdown">
-        <li class="navbar-item"><a class="navbar-link" href="/TP1_SIR">Apontamentos</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/TP1_SIR/apontamentos.php">Apontamentos</a></li>
         <li class="navbar-item"><a class="navbar-link" href="/TP1_SIR">Perfil</a></li>
         <li class="navbar-item"><a class="navbar-link" href="/TP1_SIR">Sair</a></li>
       </ul>
