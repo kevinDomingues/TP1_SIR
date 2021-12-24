@@ -13,7 +13,7 @@
       <ul class="navbar-links" id="dropdown">
         <li class="navbar-item"><a class="navbar-link" href="/TP1_SIR/apontamentos.php">Apontamentos</a></li>
         <li class="navbar-item"><a class="navbar-link" href="/TP1_SIR/perfil.php">Perfil</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="/TP1_SIR">Sair</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/TP1_SIR/logout.php">Sair</a></li>
       </ul>
     </div>
   </nav>

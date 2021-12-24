@@ -2,11 +2,17 @@
 require_once './components/header.php';
 require_once './components/nav.php';
 
+session_start();
+
+if (empty($_SESSION['id_email'])) {
+    header('location: login.php');
+}
+
+
 ?>
 
 <body style="background-color:#f7f8fc;">
     
-
     <div class="bodydashboard">
 
         <div class="dashboardcontainer">

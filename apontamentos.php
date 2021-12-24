@@ -2,6 +2,11 @@
 require_once './components/header.php';
 require_once './components/nav.php';
 
+session_start();
+
+if (empty($_SESSION['id_email'])) {
+    header('location: login.php');
+}
 ?>
 
 <body style="background-color:#f7f8fc;">
@@ -10,14 +15,17 @@ require_once './components/nav.php';
     <div class="bodyapontamentos">
 
         <div class="apontamentoscontainer">
-            <div class="apontamentoscard apontamentosleft-menu">
+            <div class="apontamentoscard apontamentosleft-menu">       
                 <div class="apontamentoscard-left-menu-header">
+                    <div style="padding: 30px; padding-top: 0px">
+                        <a class="createButton" href="create.php">Criar</a>
+                    </div>
                     <h1 class="titleFiltros">Filtros</h1>
                 </div>
 
                 <div class="apontamentoscard-body">
                     <button type="button" class="collapsible">Ordenar</button>
-                    <div class="content">
+                    <div class="apontamentoscontent">
                         <ul class="no-bullets">
                             <li><a href="">Por nome</a></li>
                             <li><a href="">Por tipo</a></li>
@@ -26,7 +34,7 @@ require_once './components/nav.php';
                     </div>
                     
                     <button type="button" class="collapsible">Mostrar apenas</button>
-                    <div class="content">
+                    <div class="apontamentoscontent">
                         <ul class="no-bullets">
                             <li><a href="">Aniversários</a></li>
                             <li><a href="">Lembretes</a></li>
@@ -35,33 +43,6 @@ require_once './components/nav.php';
                             <li><a href="">Outros</a></li>
                         </ul>
                     </div>
-
-      <!--              <ul>
-                        <li>
-                            <details>
-                                <summary>Ordenar</summary>
-                                
-                                    <li><a href="">Ordenar por nome</a></li>
-                                    <li><a href="">Ordenar por tipo</a></li>
-                                    <li><a href="">Ordenar por data de modificação</a></li>
-                                    <li><a href="">Ordenar por data de término</a></li>
-                                
-                            </details>
-                        </li>
-                        <li>
-                            <details>
-                                <summary>Filtra</summary>
-                                
-                                    <li><a href="">Aniversário</a></li>
-                                    <li><a href="">Lembrete de sítio</a></li>
-                                    <li><a href="">Outros</a></li>
-                                </ul>
-                            </details>
-
-                        </li>
-                    </ul> -->
-                    
-                   
                 </div>
             </div>
 

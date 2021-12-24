@@ -3,6 +3,12 @@
 require_once './components/header.php';
 require_once './database/connection.php';
 
+session_start();
+
+if (!empty($_SESSION['id_email'])) {
+  header('location: dashboard.php');
+}
+
 $email = '';
 $pass = '';
 
@@ -22,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ) {
 
   if($user){
     if($user['password'] === $pass){
+      $_SESSION['id_email']  = $user['id_email'];
       header('location: dashboard.php');
     } else {
       $err = 'Credenciais erradas';

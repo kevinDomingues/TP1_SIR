@@ -149,7 +149,7 @@ ul.no-bullets {
     background-color: var(--buttons-hover);
   }
   
-  .content {
+  .apontamentoscontent {
     display: flex;
     justify-content: flex-start;
     text-align: start;
@@ -166,6 +166,28 @@ ul.no-bullets {
     color: black;
     font-weight: bold;
     
+  }
+
+  .createButton {
+    background-color: var(--bg-contrast);
+    padding: 8px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px 10px;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .createButton:hover {
+    background-color: #29a364;
   }
 
 

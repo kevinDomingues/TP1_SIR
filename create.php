@@ -1,5 +1,7 @@
 <?php 
 require_once './database/connection.php';
+require_once './components/header.php';
+require_once './components/nav.php';
 
 $nome = '';
 $desc = '';
@@ -31,45 +33,54 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ){
     } 
 }
 ?>
+<div class="bodyapontamentosforms">
+    <div class="apontamentosformscontainer">     
+        <div class="apontamentosformscard apontamentosformsfeed" style="min-width: 60%">
+            <div class="apontamentosformscardsFeed">
+                <div class="apontamentosformscard-body">
+                    <div class="content" style="margin-bottom: 5%">
+                        <h1>Criar Apontamento</h1>
+                        <form action="login.php" action="login.php" method="POST">
+                        <div>
+                            <label for="">Tipo Lembrete</label>
+                            <br>
+                            <input style="width: 80%" type="email" name="lembrete" id="txt" aria-describedby="helpId" placeholder="Tipo" required>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <h1 class="mt-5">Criar Produto</h1>
-
-        <?php if (!empty($erros)): ?>
-        <div class="alert alert-danger">
-            <?php foreach ($erros as $err) : ?>
-               <div><?php echo $err ?></div>
-            <?php endforeach ?> 
+                        </div>
+                        <div>
+                            <label for="">Descrição</label>
+                            <br>
+                            <input style="width: 80%" type="text" name="pass" id="txt" placeholder="Password" required>
+                        </div>
+                        <div>
+                            <label for="">Informação</label>
+                            <br>
+                            <input style="width: 80%" type="text" name="pass" id="txt" placeholder="Password" required>
+                        </div>
+                        <div>
+                            <label for="">Data</label>
+                            <br>
+                            <input style="width: 80%" type="text" name="pass" id="txt" placeholder="Password" required>
+                        </div>
+                        <div>
+                            <label for="">Imagem</label>
+                            <br>
+                            <input style="width: 80%" type="file" name="image" id="txt" placeholder="Password" required>
+                        </div>
+                        <button style="width: 80%" type="submit" class="createButton">Login</button>
+                        </form>
+                        <?php if ($err): ?>
+                        <div class="error">
+                            <div><?php echo $err ?></div>
+                        </div>
+                        <?php endif ?>
+                        <br>
+                        <a class="btn" style="font-size: 16px" href="apontamentos.php">Voltar</a>
+                    </div>                    
+                </div>               
+            </div>
         </div>
-        <?php endif ?>
-
-        <a href="index.php" class="btn btn-outline-success mt-3">Ver produtos</a>
-
-        <form class="mt-5" action="create.php" method="POST">
-            <div class="mb-3">
-                <label class="form-label">Nome</label>
-                <input type="text" id="nome" name="nome" class="form-control" value="<?php echo $nome ?>">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Descricao</label>
-                <textarea id="desc" name="desc" class="form-control" value="<?php echo $desc ?>"></textarea>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Preço</label>
-                <input type="number" id="preco" name="preco" step=".01" class="form-control" value="<?php echo $preco ?>">
-            </div>
-            <button type="submit" class="btn btn-primary">Cria produto</button>
-        </form>
     </div>
+</div>
 </body>
 </html>

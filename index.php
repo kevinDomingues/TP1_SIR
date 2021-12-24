@@ -32,7 +32,7 @@
     <!--    <li class="navbar-item"><a class="navbar-link" href="/about">Apontamentos</a></li>
         <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
         <li class="navbar-item"><a class="navbar-link" href="/careers">Careers</a></li>  -->
-        <li class="navbar-item"><a class="navbar-link" href="dashboard.php">Entrar</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="login.php">Entrar</a></li>
       </ul>
     </div>
   </nav>
