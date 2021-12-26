@@ -1,4 +1,5 @@
 <?php 
+require_once './database/connection.php';
 require_once './components/header.php';
 require_once './components/nav.php';
 
@@ -7,6 +8,13 @@ session_start();
 if (empty($_SESSION['id_email'])) {
     header('location: login.php');
 }
+
+$statement = $pdo->prepare("SELECT * FROM apontamento WHERE id_email = :id_email");
+$statement->bindValue(':id_email', $_SESSION['id_email']);
+$statement->execute();
+
+$apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <body style="background-color:#f7f8fc;">
@@ -39,28 +47,70 @@ if (empty($_SESSION['id_email'])) {
                             <li><a href="">Aniversários</a></li>
                             <li><a href="">Lembretes</a></li>
                             <li><a href="">Marcos</a></li>
-                            <li><a href="">Localizar</a></li>
-                            <li><a href="">Outros</a></li>
+                            <li><a href="">Objetos</a></li>
+                            <li><a href="">Todos</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="apontamentoscard apontamentosfeed">
+                <?php foreach($apontamentos as $apt) { ?>
                 <div class="apontamentoscardsFeed">
                     <div class="apontamentoscard-header">
-                        <img src="./assets/ballons.png" alt="ballons" />
+                        <?php if(empty($apt['image_path'])) {
+                            switch ($apt['id_tipoApontamento']) {
+                                case 1:
+                                    echo '<img src="./assets/ballons.png" alt="Aniversário" />';
+                                    break;
+                                case 2:
+                                    echo '<img src="./assets/reminder.png" alt="Lembrete" />';
+                                    break;
+                                case 3:
+                                    echo '<img src="./assets/object.png" alt="Objeto" />';
+                                    break;
+                                case 4:
+                                    echo '<img src="./assets/marco.png" alt="Marco" />';
+                                    break;
+                            }
+                        } else { ?>             
+                        <img src="<?php echo $apt['image_path'] ?>" alt="<?php echo $apt['descricao'] ?>" />
+                       <?php } ?>
+                        
                     </div>
                     <div class="apontamentoscard-body">
-                        <span class="apontamentostag apontamentostag-purple">Aniversário</span>
+                        <?php 
+                        $span = '';
+                        $color = '';
+                        
+                        switch($apt['id_tipoApontamento']) {
+                            case 1:
+                                $span = 'Aniversário';
+                                $color = 'purple';
+                                break;
+                            case 2:
+                                $span = 'Lembrete';
+                                $color = 'blue';
+                                break;
+                            case 3:
+                                $span = 'Objeto';
+                                $color = 'yellow';
+                                break;
+                            case 4:
+                                $span = 'Marco';
+                                $color = 'green';
+                                break;
+                        }
+                        ?>
+                        <span class="apontamentostag apontamentostag-<?php echo $color ?>"><?php echo $span ?></span>
                         <h4>
-                            O Kévin faz anos
+                            <?php echo $apt['descricao'] ?>
                         </h4>
                         <p>
-                            Aniversário do Kévin dia 15 de Novembro
+                            <?php echo $apt['informacao'] ?>
                         </p>
                         <div class="apontamentosuser">
-                            <small>22/12/2021 13:02</small>
+                            <small><?php echo $apt['data_criacao'] ?></small>
                         </div>
                         
                     </div>
@@ -69,90 +119,7 @@ if (empty($_SESSION['id_email'])) {
 
                 <hr>
 
-                <div class="apontamentoscardsFeed">
-                    <div class="apontamentoscard-header">
-                        <img src="./assets/ballons.png" alt="ballons" />
-                    </div>
-                    <div class="apontamentoscard-body">
-                        <span class="apontamentostag apontamentostag-purple">Aniversário</span>
-                        <h4>
-                            O Kévin faz anos
-                        </h4>
-                        <p>
-                            Aniversário do Kévin dia 15 de Novembro
-                        </p>
-                        <div class="apontamentosuser">
-                            <small>22/12/2021 13:02</small>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-
-                <hr>
-                <div class="apontamentoscardsFeed">
-                    <div class="apontamentoscard-header">
-                        <img src="./assets/ballons.png" alt="ballons" />
-                    </div>
-                    <div class="apontamentoscard-body">
-                        <span class="apontamentostag apontamentostag-purple">Aniversário</span>
-                        <h4>
-                            O Kévin faz anos
-                        </h4>
-                        <p>
-                            Aniversário do Kévin dia 15 de Novembro
-                        </p>
-                        <div class="apontamentosuser">
-                            <small>22/12/2021 13:02</small>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-
-                <hr>
-                <div class="apontamentoscardsFeed">
-                    <div class="apontamentoscard-header">
-                        <img src="./assets/ballons.png" alt="ballons" />
-                    </div>
-                    <div class="apontamentoscard-body">
-                        <span class="apontamentostag apontamentostag-purple">Aniversário</span>
-                        <h4>
-                            O Kévin faz anos
-                        </h4>
-                        <p>
-                            Aniversário do Kévin dia 15 de Novembro
-                        </p>
-                        <div class="apontamentosuser">
-                            <small>22/12/2021 13:02</small>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-
-                <hr>
-                <div class="apontamentoscardsFeed">
-                    <div class="apontamentoscard-header">
-                        <img src="./assets/ballons.png" alt="ballons" />
-                    </div>
-                    <div class="apontamentoscard-body">
-                        <span class="apontamentostag apontamentostag-purple">Aniversário</span>
-                        <h4>
-                            O Kévin faz anos
-                        </h4>
-                        <p>
-                            Aniversário do Kévin dia 15 de Novembro
-                        </p>
-                        <div class="apontamentosuser">
-                            <small>22/12/2021 13:02</small>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-
-                <hr>
+                <?php } ?>
 
             </div>
         </div>

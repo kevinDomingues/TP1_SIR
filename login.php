@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ) {
             </div>
             <div class="content">
                 <h1>Login</h1>
-                <form action="login.php" action="login.php" method="POST">
+                <form action="login.php" method="POST">
                   <div>
                       <label for="">Email</label>
                       <br>

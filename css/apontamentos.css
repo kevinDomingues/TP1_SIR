@@ -15,7 +15,13 @@ box-sizing: border-box;
 }
 .apontamentoscontainer {
     display: flex;
-    justify-content: space-evenly;
+    
+    flex-wrap: wrap;
+    padding: 0%;
+
+}
+
+.dashboardcontainer {
     flex-wrap: wrap;
     padding: 0%;
 
@@ -52,22 +58,25 @@ box-sizing: border-box;
     text-transform: uppercase;
     cursor: pointer;
 }
-.apontamentostag-teal {
-background-color: #47bcd4;
+.apontamentostag-blue {
+    background-color: #47bcd4;
 }
 .apontamentostag-purple {
-background-color: #5e76bf;
+    background-color: #a45ebf;
 }
-.apontamentostag-pink {
-background-color: #cd5b9f;
+.apontamentostag-yellow {
+    background-color: #dad73c;
+}
+.apontamentostag-green {
+    background-color: #72cd5b;
 }
 
 .apontamentoscard-body p {
-font-size: 13px;
-margin: 0 0 40px;
+    font-size: 13px;
+    margin: 0 0 40px;
 }
 .apontamentosuser {
-display: flex;
+    display: flex;
 
 }
 
@@ -78,10 +87,10 @@ display: flex;
     margin-right: 1%;
 }
 .apontamentosuser-info h5 {
-margin: 0;
+    margin: 0;
 }
 .apontamentosuser-info small {
-color: #545d7a;
+    color: #545d7a;
 }
 
 .apontamentosleft-menu{
@@ -90,6 +99,14 @@ color: #545d7a;
     margin-left:-50%;
     min-height: 20%;
     max-height: 30%;
+}
+
+.dashboardleft-menu{
+    float: left;
+    min-width: 45%;
+    margin-left:-50%;
+    min-height: 20%;
+    max-height: 60%;
 }
 
 .apontamentoscard-left-menu-header{
@@ -118,7 +135,7 @@ ul.no-bullets {
 
 .apontamentoscardsFeed {
     display: flex;
-    justify-content: space-evenly;
+    
     margin-top: -5%;
 }
 
@@ -205,7 +222,7 @@ ul.no-bullets {
     }
     .apontamentoscontainer {
         display: flex;
-        justify-content: space-evenly;
+        
         flex-wrap: wrap;
         padding: 0%;
         margin-top: 10%;
@@ -241,7 +258,7 @@ ul.no-bullets {
     }
     .apontamentoscontainer {
         display: flex;
-        justify-content: space-evenly;
+        
         flex-wrap: wrap;
         padding: 0%;
         margin-top: 20%;
@@ -278,7 +295,7 @@ ul.no-bullets {
     }
     .apontamentoscontainer {
         display: flex;
-        justify-content: space-evenly;
+        
         flex-wrap: wrap;
         padding: 0%;
         margin-top: 20%;
