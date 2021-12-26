@@ -9,18 +9,16 @@
   font-family: "Roboto", sans-serif;
   color: #10182f;
   text-align: center;
-  padding: 5%;
-  padding-left: 26%;
+  padding-top: 6%;
+  padding-left: 18%;
   
 }
 .dashboardcontainer {
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 0%;
 }
 .dashboardcard {
-  margin: 10px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
@@ -51,14 +49,11 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.dashboardtag-teal {
+.dashboardtag-blue {
   background-color: #47bcd4;
 }
 .dashboardtag-purple {
-  background-color: #5e76bf;
-}
-.dashboardtag-pink {
-  background-color: #cd5b9f;
+  background-color: #a45ebf;
 }
 
 .dashboardcard-body p {
@@ -85,10 +80,10 @@
 
 .left-menu{
     float: left;
-    min-width: 45%;
-    margin-left:-50%;
+    min-width: 30%;
+    max-width: 30%;
+    margin-left:-16%;
     min-height: 20%;
-    max-height: 30%;
 }
 
 .dashboardcard-left-menu-header{
@@ -97,21 +92,21 @@
 
 .dashboardcard-left-menu-header img {
     margin-top: 5%;
-    min-width: 50%;
+    min-width: 20%;
+    max-width: 50%;
     border-radius: 50%;
     object-fit: cover;
   }
 
 .feed{
     float: left;
-    min-width: 100%;
+    min-width: 70%;
     min-height: 95%;
-    
+    margin-left: 30px;
 }
 
 .cardsFeed {
     display: flex;
-    justify-content: space-evenly;
     margin-top: -5%;
 }
 
@@ -148,11 +143,11 @@
       min-width: 45%;
       margin-left:-50%;
       min-height: 20%;
-      max-height: 30%;
+      max-height: 90%;
   }
   .feed{
       float: left;
-      min-width: 100%;
+      min-width: 90%;
       min-height: 95%;
     
 }
@@ -181,10 +176,10 @@
   .left-menu{
       min-width: 45%;
       min-height: 20%;
-      max-height: 30%;
+      max-height: 90%;
   }
   .feed{
-      min-width: 100%;
+      min-width: 90%;
       min-height: 95%;
     
 }
@@ -215,13 +210,13 @@
     margin: 0;
     padding: 0;
     min-height: 20%;
-    max-height: 30%;
+    max-height: 90%;
   }
   .feed{
       float: left;
-      min-width: 100%;
+      max-width: 90%;
       min-height: 95%;
-    
+      margin-left: 0;
 }
 
 }

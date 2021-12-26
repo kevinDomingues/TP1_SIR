@@ -232,7 +232,6 @@ body {
 .titulo{ 
   font-size: 3em;
   text-align: center;
-  font-family: fantasy;
   font-style: normal;
   color: var(--text-color);
 }

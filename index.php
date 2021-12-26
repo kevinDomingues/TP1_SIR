@@ -47,7 +47,7 @@
 
 <div class="caption">
   <div class="titulocontainer">
-      <h1 class="titulo">Sherlock Holmes</h1>
+      <h1 class="titulo">Remind Everything</h1>
   </div>
 </div>
 
