@@ -16,7 +16,7 @@ $statement->execute();
 
 $utilizador = $statement->fetch(PDO::FETCH_UNIQUE);
 
-$statement = $pdo->prepare("SELECT * FROM apontamento WHERE id_email = :id_email AND id_tipoApontamento IN (1,2) AND ativo = 1");
+$statement = $pdo->prepare("SELECT * FROM apontamento WHERE id_email = :id_email AND id_tipoApontamento IN (1,2) AND ativo = 1  ORDER BY data_criacao");
 $statement->bindValue(':id_email', $_SESSION['id_email']);
 $statement->execute();
 
@@ -37,9 +37,11 @@ $count = $statement->fetch();
         <div class="dashboardcontainer">
             <div class="dashboardcard left-menu">
                 <div class="dashboardcard-left-menu-header">
-                    <?php if (empty($utilizador['profile_pic'])) : ?>
+                    <?php if (empty($utilizador['profile_pic'])) { ?>
                         <img src="./assets/blank_user.png" alt="rover" />
-                    <?php endif ?>
+                    <?php } else { ?>
+                        <img style="object-fit: cover; height: 100px; width: 100px;" src="<?php echo $utilizador['profile_pic'] ?>" alt="rover" />
+                    <?php } ?>
                     <h1><?php echo $utilizador['nome'] ?> </h1>
                     <h6><?php echo $utilizador['id_email'] ?></h6>
                 </div>

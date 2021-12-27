@@ -82,10 +82,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ){
             informacao = :informacao, data_criacao = :data_criacao WHERE id = :id");
         }
 
-        if($apagar == 'true') {
-            $img_path = '';
-        }
-
         $statement->bindValue(':id', $id_apontamento);
         $statement->bindValue(':id_email', $_SESSION['id_email']);
         $statement->bindValue(':id_tipoApontamento', $id_tipoApontamento);

@@ -1,18 +1,17 @@
 filterSelection("all")
-function filterSelection(c) {
-  console.log(c);
+function filterSelection(filter) {
+  console.log(filter);
   var x, i;
   x = document.getElementsByClassName("apontamentoscardsFeed");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  if (filter == "all") filter = "";
+
   for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    RemoverClass(x[i], "show");
+    if (x[i].className.indexOf(filter) > -1) AdicionarClass(x[i], "show");
   }
 }
 
-// Show filtered elements
-function w3AddClass(element, name) {
+function AdicionarClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -23,8 +22,7 @@ function w3AddClass(element, name) {
   }
 }
 
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
+function RemoverClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -34,4 +32,23 @@ function w3RemoveClass(element, name) {
     }
   }
   element.className = arr1.join(" ");
+}
+
+function Pesquisar() {
+  var input, filter, a, txtValue;
+  input = document.getElementById('txt');
+  filter = input.value.toUpperCase();
+  var x, i;
+  x = document.getElementsByClassName("apontamentoscardsFeed");
+  
+  for (i = 0; i < x.length; i++) {
+    a = x[i].getElementsByTagName("p")[0];
+    txtValue = a.textContent || a.innerText;
+    console.log(txtValue);
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      AdicionarClass(x[i], "show");
+    } else {
+      RemoverClass(x[i], "show");
+    }
+  } 
 }

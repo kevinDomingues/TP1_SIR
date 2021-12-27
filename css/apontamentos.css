@@ -102,7 +102,7 @@ box-sizing: border-box;
 .apontamentosleft-menu{
     float: left;
     min-width: 43%;
-    margin-left:-50%;
+    margin-left:-30%;
     min-height: 600px;
     max-height: 600px;
 }
@@ -128,7 +128,7 @@ text-align: center;
 
 .apontamentosfeed{
     float: left;
-    min-width: 96%;
+    min-width: 700px;
     min-height: 95%;
 }
 
@@ -275,7 +275,7 @@ hr {
       background-color: none;
   }
 
-  @media screen and (max-width: 1017px) {
+  @media screen and (max-width: 1150px) {
 
     .bodyapontamentos {
         display: flex;

@@ -1,24 +1,6 @@
 <?php 
   require_once './components/header.php';
- /* require_once './database/connection.php';
-
-  if ($_SERVER['REQUEST_METHOD'] !== 'POST' ) {
-    header('location: login.php');
-  } else {
-    $email = $_POST['email'];
-    $statement = $pdo->prepare("SELECT * FROM utilizador WHERE id_email = :email");
-
-    $statement->bindValue(':email', $email);
-    $statement->execute();
-
-    $user = $statement->fetch(PDO::FETCH_ASSOC);
-
-    if($user['ativo']===false) {
-      header('location: login.php');
-    }
-
-  } */
-  
+  require_once './components/scripts.php';  
 ?>
 
 <header id="navbar">
@@ -27,11 +9,13 @@
       <img class="navbar-logo" src="./assets/logo.png">
       221B
     </a>
+    <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+      <ul style="position: relative; box-shadow: none" class="navbar-links" id="dropdown">
+        <li class="navbar-item"><a class="navbar-link" href="login.php">Entrar</a></li>
+      </ul>
+    </button>
     <div id="navbar-menu" aria-labelledby="navbar-toggle">
-      <ul class="navbar-links">
-    <!--    <li class="navbar-item"><a class="navbar-link" href="/about">Apontamentos</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="/careers">Careers</a></li>  -->
+      <ul class="navbar-links" id="dropdown">
         <li class="navbar-item"><a class="navbar-link" href="login.php">Entrar</a></li>
       </ul>
     </div>

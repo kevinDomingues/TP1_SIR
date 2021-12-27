@@ -2,6 +2,8 @@
 require_once './components/header.php';
 require_once './database/connection.php';
 
+session_start();
+
 $email = '';
 $nome = '';
 $pass = '';
@@ -35,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ) {
 
           $statement->execute();
 
+          $_SESSION['id_email']  = $email;
           header('location: dashboard.php');
 
     } else {

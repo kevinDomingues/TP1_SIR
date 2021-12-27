@@ -9,7 +9,7 @@ if (empty($_SESSION['id_email'])) {
     header('location: login.php');
 }
 
-$statement = $pdo->prepare("SELECT * FROM apontamento WHERE id_email = :id_email AND ativo = 1");
+$statement = $pdo->prepare("SELECT * FROM apontamento WHERE id_email = :id_email AND ativo = 1 ORDER BY id DESC");
 $statement->bindValue(':id_email', $_SESSION['id_email']);
 $statement->execute();
 
@@ -32,6 +32,7 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                 </div>
 
                 <div class="apontamentoscard-body">
+                    <input style="width: 100%; margin: 0;" type="text" id="txt" placeholder="Pesquisar" onkeyup="Pesquisar()"/>
                     <button type="button" class="collapsible">Mostrar apenas</button>
                     <div class="apontamentoscontent">
                         <ul class="no-bullets" id="btnContainer">
@@ -47,7 +48,7 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                 </div>
             </div>
 
-            <div class="apontamentoscard apontamentosfeed">
+            <div id="procurarAqui" class="apontamentoscard apontamentosfeed">
                 <?php if(empty($apontamentos)) { ?>
                     <div class="apontamentoscardsFeed" style="height: 900px">
                     <div class="apontamentoscard-header">
@@ -73,6 +74,38 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                 <?php } ?>
                 <?php foreach($apontamentos as $apt) { ?>
                 <div class="apontamentoscardsFeed <?php echo $apt['id_tipoApontamento'] ?>">
+                <?php 
+                        $span = '';
+                        $color = '';
+                        
+                        switch($apt['id_tipoApontamento']) {
+                            case 1:
+                                $span = 'Aniversário';
+                                $color = 'purple';
+                                break;
+                            case 2:
+                                $span = 'Lembrete';
+                                $color = 'blue';
+                                break;
+                            case 3:
+                                $span = 'Objeto';
+                                $color = 'yellow';
+                                break;
+                            case 4:
+                                $span = 'Marco';
+                                $color = 'green';
+                                break;
+                            case 5:
+                                $span = 'Livro';
+                                $color = 'orange';
+                                break;
+                            case 6:
+                                $span = 'Documento';
+                                $color = 'grey';
+                                break;
+                        }
+                        ?>
+                    <p style="display: none"><?php echo $apt['descricao']; echo $apt['informacao']; echo $span ?></p>
                     <div class="apontamentoscard-header">
                         <?php if(empty($apt['image_path'])) {
                             switch ($apt['id_tipoApontamento']) {
@@ -101,37 +134,6 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                         
                     </div>
                     <div class="apontamentoscard-body">
-                        <?php 
-                        $span = '';
-                        $color = '';
-                        
-                        switch($apt['id_tipoApontamento']) {
-                            case 1:
-                                $span = 'Aniversário';
-                                $color = 'purple';
-                                break;
-                            case 2:
-                                $span = 'Lembrete';
-                                $color = 'blue';
-                                break;
-                            case 3:
-                                $span = 'Objeto';
-                                $color = 'yellow';
-                                break;
-                            case 4:
-                                $span = 'Marco';
-                                $color = 'green';
-                                break;
-                            case 5:
-                                $span = 'Livro';
-                                $color = 'orange';
-                                break;
-                            case 6:
-                                $span = 'documento';
-                                $color = 'grey';
-                                break;
-                        }
-                        ?>
                         <span class="apontamentostag apontamentostag-<?php echo $color ?>"><?php echo $span ?></span>
                         <h4>
                             <?php echo $apt['descricao'] ?>
