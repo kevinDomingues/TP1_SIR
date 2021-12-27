@@ -9,7 +9,7 @@ if (empty($_SESSION['id_email'])) {
     header('location: login.php');
 }
 
-$statement = $pdo->prepare("SELECT * FROM apontamento WHERE id_email = :id_email");
+$statement = $pdo->prepare("SELECT * FROM apontamento WHERE id_email = :id_email AND ativo = 1");
 $statement->bindValue(':id_email', $_SESSION['id_email']);
 $statement->execute();
 
@@ -43,20 +43,45 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                     
                     <button type="button" class="collapsible">Mostrar apenas</button>
                     <div class="apontamentoscontent">
-                        <ul class="no-bullets">
-                            <li><a href="">Aniversários</a></li>
-                            <li><a href="">Lembretes</a></li>
-                            <li><a href="">Marcos</a></li>
-                            <li><a href="">Objetos</a></li>
-                            <li><a href="">Todos</a></li>
+                        <ul class="no-bullets" id="btnContainer">
+                            <li><button onclick="filterSelection('1')">Aniversários</button></li>
+                            <li><button onclick="filterSelection('2')">Lembretes</button></li>
+                            <li><button onclick="filterSelection('3')">Objetos</button></li>
+                            <li><button onclick="filterSelection('4')">Marcos</button></li>                           
+                            <li><button onclick="filterSelection('5')">Livros</button></li>
+                            <li><button onclick="filterSelection('6')">Documentos</button></li>
+                            <li><button onclick="filterSelection('all')">Todos</button></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="apontamentoscard apontamentosfeed">
+                <?php if(empty($apontamentos)) { ?>
+                    <div class="apontamentoscardsFeed" style="height: 900px">
+                    <div class="apontamentoscard-header">
+                          
+                        
+                    </div>
+                    <div class="apontamentoscard-body">
+                        
+                        <span class="apontamentostag apontamentostag-purple">Crie apontamentos</span>
+                        <h4>
+                            Não existe nenhum apontamento nesta conta
+                        </h4>
+                        <p>
+                            Crie apontamentos para os visualizar aqui
+                        </p>
+                        <div class="apontamentosuser">
+                            
+                        </div>
+                    </div>
+                    <br>
+                    
+                </div>
+                <?php } ?>
                 <?php foreach($apontamentos as $apt) { ?>
-                <div class="apontamentoscardsFeed">
+                <div class="apontamentoscardsFeed <?php echo $apt['id_tipoApontamento'] ?>">
                     <div class="apontamentoscard-header">
                         <?php if(empty($apt['image_path'])) {
                             switch ($apt['id_tipoApontamento']) {
@@ -71,6 +96,12 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                                     break;
                                 case 4:
                                     echo '<img src="./assets/marco.png" alt="Marco" />';
+                                    break;
+                                case 5:
+                                    echo '<img src="./assets/books.png" alt="Livro" />';
+                                    break;
+                                case 6:
+                                    echo '<img src="./assets/file.png" alt="Documento" />';
                                     break;
                             }
                         } else { ?>             
@@ -100,6 +131,14 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                                 $span = 'Marco';
                                 $color = 'green';
                                 break;
+                            case 5:
+                                $span = 'Livro';
+                                $color = 'orange';
+                                break;
+                            case 6:
+                                $span = 'documento';
+                                $color = 'grey';
+                                break;
                         }
                         ?>
                         <span class="apontamentostag apontamentostag-<?php echo $color ?>"><?php echo $span ?></span>
@@ -112,12 +151,18 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                         <div class="apontamentosuser">
                             <small><?php echo $apt['data_criacao'] ?></small>
                         </div>
-                        
+                        <div class="buttons">
+                            <a href="update.php?id=<?php echo $apt['id'] ?>" class="btn-apontamentos"><i class='fa fa-pencil'></i></a>
+                            <form action="delete.php" method="POST">
+                                <input type="hidden" name="id" value="<?php echo $apt['id'] ?>">
+                                <button style="border: none" type=submit class="btn-apontamentos"><i class="fa fa-trash red-color"></i></button>
+                            </form>
+                        </div>
                     </div>
+                    <br>
                     
+                    <hr>
                 </div>
-
-                <hr>
 
                 <?php } ?>
 

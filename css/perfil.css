@@ -68,11 +68,6 @@
     color: var(--buttons-hover);
   }
   
-  .perfil-localizacao {
-    margin: 10px 0;
-    color: var(--content-background) ;
-  }
-  
   .perfil-icons{
     display: flex;
     justify-content: center;
@@ -135,14 +130,8 @@
   /*   background: #bbb; */
     background: linear-gradient(130deg, var(--content-background), var(--bg-color));
   }
-  
-  .perfil-instagram-conta{
-    margin-top: 50px;
-    font-size: 15px;
-  }
 
   .fa-pencil{
       z-index: 3;
       position: relative;
-      float: right;
   }

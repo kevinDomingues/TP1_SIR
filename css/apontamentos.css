@@ -70,6 +70,12 @@ box-sizing: border-box;
 .apontamentostag-green {
     background-color: #72cd5b;
 }
+.apontamentostag-orange {
+    background-color: #da763c;
+}
+.apontamentostag-grey {
+    background-color: #999999;
+}
 
 .apontamentoscard-body p {
     font-size: 13px;
@@ -97,8 +103,8 @@ box-sizing: border-box;
     float: left;
     min-width: 43%;
     margin-left:-50%;
-    min-height: 20%;
-    max-height: 30%;
+    min-height: 600px;
+    max-height: 600px;
 }
 
 .dashboardleft-menu{
@@ -122,9 +128,8 @@ text-align: center;
 
 .apontamentosfeed{
     float: left;
-    min-width: 100%;
+    min-width: 96%;
     min-height: 95%;
-
 }
 
 ul.no-bullets {
@@ -134,12 +139,11 @@ ul.no-bullets {
   }
 
 .apontamentoscardsFeed {
-    display: flex;
-    
+    display: none;
     margin-top: -5%;
 }
 
-.apontamentosfeed hr {
+hr {
     margin-top: 5%;
     border: 0;
     min-height: 1px;
@@ -178,11 +182,16 @@ ul.no-bullets {
       color: var(--bg-contrast)
   }
   
-  .no-bullets a{
+  .no-bullets button{
     text-decoration: none;
     color: black;
     font-weight: bold;
-    
+    background-color: #fff;
+    border: none;
+  }
+
+  .show {
+      display: flex;
   }
 
   .createButton {
@@ -233,7 +242,7 @@ ul.no-bullets {
         min-width: 45%;
         margin-left:-50%;
         min-height: 20%;
-        max-height: 30%;
+        max-height: 600px;
     }
     .apontamentosfeed{
         float: left;
@@ -242,6 +251,28 @@ ul.no-bullets {
       
   }
   
+  }
+  .btn-apontamentos{
+    padding: 5px 10px;
+    color: var(--buttons-hover);
+    background-color: none;
+    border-radius: 6px;
+    margin-top: 5px;
+    transition: .3s linear;
+    background-color: #fff
+  }
+
+  .btn-apontamentos:hover {
+    background-color: #d3d3d3;
+  }
+
+  .buttons {
+      height: 20px;
+  }
+
+  .red-color {
+      color: var(--buttons-delete);
+      background-color: none;
   }
 
   @media screen and (max-width: 1017px) {
@@ -307,7 +338,7 @@ ul.no-bullets {
       margin: 0;
       padding: 0;
       min-height: 20%;
-      max-height: 30%;
+      max-height: 600px;
     }
     .apontamentosfeed{
       float: left;

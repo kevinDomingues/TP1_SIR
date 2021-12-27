@@ -16,11 +16,17 @@ $statement->execute();
 
 $utilizador = $statement->fetch(PDO::FETCH_UNIQUE);
 
-$statement = $pdo->prepare("SELECT * FROM apontamento WHERE id_email = :id_email AND id_tipoApontamento IN (1,2)");
+$statement = $pdo->prepare("SELECT * FROM apontamento WHERE id_email = :id_email AND id_tipoApontamento IN (1,2) AND ativo = 1");
 $statement->bindValue(':id_email', $_SESSION['id_email']);
 $statement->execute();
 
 $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+$statement = $pdo->prepare("SELECT COUNT(id) FROM apontamento WHERE id_email = :id_email AND ativo = 1");
+$statement->bindValue(':id_email', $_SESSION['id_email']);
+$statement->execute();
+
+$count = $statement->fetch();
 
 ?>
 
@@ -39,12 +45,34 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                 </div>
 
                 <div class="dashboardcard-body">
-                    <p><h4>Próximo apontamento a expirar:</h4>Aniversário do Kévin</p>
-                    <p><h4>Último apontamento registado:</h4>Aniversário do Kévin</p>
+                    <p><h4>Total de apontamentos:</h4><p style="width: 100%; text-align: center"><?php echo $count['COUNT(id)'] ?></p></p>
                 </div>
             </div>
 
             <div class="dashboardcard feed">
+            <?php if(empty($apontamentos)) { ?>
+                    <div class="apontamentoscardsFeed" style="height: 900px">
+                    <div class="apontamentoscard-header">
+                          
+                        
+                    </div>
+                    <div class="apontamentoscard-body">
+                        
+                        <span class="apontamentostag apontamentostag-purple">Crie apontamentos</span>
+                        <h4>
+                            Não existe nenhum apontamento nesta conta
+                        </h4>
+                        <p>
+                            Crie apontamentos para os visualizar aqui
+                        </p>
+                        <div class="apontamentosuser">
+                            
+                        </div>
+                    </div>
+                    <br>
+                    
+                </div>
+                <?php } ?>
             <?php foreach($apontamentos as $apt) { ?>
                 <div class="cardsFeed">
                     <div class="dashboardcard-header">

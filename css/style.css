@@ -29,6 +29,7 @@
   --text-color-focus: white;
   --bg-contrast: hsl(190, 80%, 29%);
   --buttons-hover: hsla(190, 93%, 30%, 1);
+  --buttons-delete: rgb(202, 45, 34);
   --content-background: hsl(190, 93%, 85%);
 }
 * {
