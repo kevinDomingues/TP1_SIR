@@ -32,15 +32,6 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                 </div>
 
                 <div class="apontamentoscard-body">
-                    <button type="button" class="collapsible">Ordenar</button>
-                    <div class="apontamentoscontent">
-                        <ul class="no-bullets">
-                            <li><a href="">Por nome</a></li>
-                            <li><a href="">Por tipo</a></li>
-                            <li><a href="">Por data</a></li>
-                        </ul>
-                    </div>
-                    
                     <button type="button" class="collapsible">Mostrar apenas</button>
                     <div class="apontamentoscontent">
                         <ul class="no-bullets" id="btnContainer">
@@ -105,7 +96,7 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                                     break;
                             }
                         } else { ?>             
-                        <img src="<?php echo $apt['image_path'] ?>" alt="<?php echo $apt['descricao'] ?>" />
+                        <img style="border-radius: 15px" src="<?php echo $apt['image_path'] ?>" alt="<?php echo $apt['descricao'] ?>" />
                        <?php } ?>
                         
                     </div>

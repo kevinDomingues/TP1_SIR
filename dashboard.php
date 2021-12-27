@@ -92,7 +92,7 @@ $count = $statement->fetch();
                                     break;
                             }
                         } else { ?>             
-                        <img src="<?php echo $apt['image_path'] ?>" alt="<?php echo $apt['descricao'] ?>" />
+                        <img style="border-radius: 15px" src="<?php echo $apt['image_path'] ?>" alt="<?php echo $apt['descricao'] ?>" />
                        <?php } ?>
                     </div>
                     <div class="dashboardcard-body">
