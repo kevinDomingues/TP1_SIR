@@ -154,9 +154,7 @@ $apontamentos = $statement->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <br>
                     
-                    <hr>
                 </div>
-
                 <?php } ?>
 
             </div>

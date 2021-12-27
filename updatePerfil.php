@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ){
             <div class="apontamentosformscardsFeed">
                 <div class="apontamentosformscard-body">
                     <div class="content" style="margin-bottom: 5%">
-                        <h1>Atualizar Apontamento</h1>
+                        <h1>Atualizar Perfil</h1>
                         <form action="" method="POST" enctype="multipart/form-data">
                         <div>
                             <label for="">Nome</label>
